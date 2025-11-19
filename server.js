@@ -63,7 +63,8 @@ io.on('connection', (socket) => {
 });
 
 // 6. 서버 실행
-const PORT = 3000;
+// 6. 서버 실행 (Render.com 호환되게 수정)
+const PORT = process.env.PORT || 3000; // Render가 주는 포트 사용
 server.listen(PORT, () => {
-  console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
+  console.log(`서버가 ${PORT}번 포트에서 실행 중입니다.`);
 });
