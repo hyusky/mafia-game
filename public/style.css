@@ -1,0 +1,114 @@
+/* (이 파일은 public 폴더 안에 넣어주세요) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* --- 입장 화면 --- */
+#join-screen {
+    padding: 20px;
+    text-align: center;
+}
+#join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#join-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#join-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* --- 채팅 화면 --- */
+#chat-screen {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#room-title {
+    margin: 0;
+    padding: 15px;
+    background-color: #eee;
+    text-align: center;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ccc;
+}
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.message {
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+.message p { margin: 0; }
+.message strong { color: #333; }
+
+.admin-msg {
+    align-self: center;
+    background-color: #e0e0e0;
+    color: #555;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.my-msg {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+.my-msg strong { display: none; } /* 내가 보낸 건 닉네임 숨김 */
+
+.other-msg {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+}
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+#chat-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+}
+#chat-form button {
+    padding: 12px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.hidden {
+    display: none !important;
+}
